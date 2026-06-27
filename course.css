@@ -1,6 +1,5 @@
 * {
     margin: 0px;
-    background: #ebe9e9;
 }
 
 .headerCourseList {
@@ -40,13 +39,6 @@
     gap: 20px;
 }
 
-.mainRight,
-.mainRight h1,
-.mainRight div,
-.mainRight p,
-.mainRight a {
-    background: #f8f6f6;
-}
 
 .cardDiv {
     padding: 15px;
@@ -86,7 +78,8 @@
 
 .hrefMenu:hover {
     padding: 15px;
-    background: #b6b4b4;
+    background: #E2E8F0;
+   color: rgb(54, 47, 151); 
 }
 
 .imgLogo {

@@ -44,9 +44,15 @@ get()
 
 function infoUser(info) {
     modal.innerHTML = ""
+    let modelOknoLeft = document.createElement("div")
+    modelOknoLeft.className = "modelOknoLeft"
+
     let div = document.createElement("div");
     div.className = "course-card";
-    div.innerHTML = `            <div class="course-header">
+
+    div.innerHTML = ` 
+
+    <div class="course-header">
                 <p class="close">X</p>
                 <span class="title">Курс</span>
             </div>

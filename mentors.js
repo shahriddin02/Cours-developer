@@ -1,6 +1,6 @@
 let allCards = document.querySelector(".allCards")
 
-let url = "https://63849dde3fa7acb14ffada13.mockapi.io/api/Courses"
+let url = "https://63849dde3fa7acb14ffada13.mockapi.io/api/Mentors"
 
 let close = document.querySelector(".close")
 let modal = document.querySelector(".modelOkna")
@@ -18,7 +18,7 @@ async function get() {
                 <div class=""cardDiv> 
                     <h1>${card.name}</h1>
                     <div class="modul">
-                        <p>🧾Модули: ${card.module}</p>
+                        <p>backend</p>
                         <hr>
                         <p>⚡Уроки: ${card.lessons}</p>
                     </div>

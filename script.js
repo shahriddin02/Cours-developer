@@ -1,8 +1,8 @@
 let url = "https://63849dde3fa7acb14ffada13.mockapi.io/api/Courses";
 
-let save = document.querySelector(".save");
+let form = document.querySelector(".save");
 
-save.onclick = async () => {
+form.onclick = async () => {
 
     let newCourse = {
 

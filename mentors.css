@@ -2,19 +2,19 @@
     margin: 0px;
 }
 
-.headerCourseList {
+.header_Course_List {
     display: flex;
     padding: 20px;
     align-items: center;
     justify-content: space-between;
 }
 
-.headerCourseList div {
+.header_Course_List div {
     display: flex;
     gap: 20px;
 }
 
-.headerCourseList button {
+.header_Course_List button {
     font-size: 20px;
     border: none;
     background: #2563EB;
@@ -23,16 +23,16 @@
     padding: 10px 20px;
 }
 
-.main {
+.main_hero {
     display: flex;
 }
 
-.mainLeft {
+.main_Left {
     width: 15%;
     padding: 20px;
 }
 
-.allCards {
+.all_Cards {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -67,7 +67,7 @@
     margin: 5px 0px;
 }
 
-.hrefMenu {
+.href_Menu {
     display: flex;
     align-items: center;
     gap: 5px;
@@ -78,7 +78,7 @@
     border-radius: 15px;
 }
 
-.hrefMenu:hover {
+.href_Menu:hover {
     padding: 15px;
     background: #E2E8F0;
     color: rgb(54, 47, 151);
@@ -96,7 +96,7 @@
     cursor: pointer;
 }
 
-.modelOkna {
+.hero_Okna {
     width: 100%;
     /* height: 100vh; */
     display: flex;
@@ -106,7 +106,7 @@
     display: none;
 }
 
-.modelOknoLeft {
+.hero_left_okno {
     width: 60%;
     opacity: 1;
     background-color: rgba(10, 10, 10, 0.267);

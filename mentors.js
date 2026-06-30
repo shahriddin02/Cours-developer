@@ -1,9 +1,9 @@
-let allCards = document.querySelector(".allCards")
+let all_Cards = document.querySelector(".all_Cards")
 
 let url = "https://63849dde3fa7acb14ffada13.mockapi.io/api/Mentors"
 
 let close = document.querySelector(".close")
-let modal = document.querySelector(".modelOkna")
+let hero = document.querySelector(".hero_Okna")
 
 
 async function get() {
@@ -23,10 +23,10 @@ async function get() {
                         <p>⚡Уроки: ${card.lessons}</p>
                     </div>
                     <div class="Journal">
-                        <a class="hrefMenu" href="">
+                        <a class="href_Menu" href="">
                             <p>🧾Журнал</p>
                         </a>
-                        <a class="hrefMenu" href="">
+                        <a class="href_Menu" href="">
                             <p>🖌</p>
                         </a>
                     </div>
@@ -37,13 +37,13 @@ async function get() {
             modal.style.display = "flex";
             infoUser(card)
         };
-        allCards.append(cardDiv)
+        all_Cards.append(cardDiv)
     });
 }
 get()
 
 function infoUser(info) {
-    modal.innerHTML = ""
+    hero.innerHTML = ""
     let div = document.createElement("div");
     div.className = "course-card";
     div.innerHTML = `            <div class="course-header">
@@ -136,7 +136,7 @@ function infoUser(info) {
 
     let close = div.querySelector('.close');
     close.onclick = () => {
-        modal.style.display = "none";
+        hero.style.display = "none";
     }
-    modal.appendChild(div)
+    hero.appendChild(div)
 }

@@ -1,6 +1,6 @@
 let url = "https://63849dde3fa7acb14ffada13.mockapi.io/api/Courses";
 
-let form = document.querySelector(".save");
+let form = document.querySelector(".course_form");
 
 form.onclick = async () => {
 
@@ -29,7 +29,11 @@ form.onclick = async () => {
         body: JSON.stringify(newCourse)
     });
 
-    alert("Курс успешно добавлен!");
+    // alert("Курс успешно добавлен!");
 
-    window.location.href = "index.html";
+    // window.location.href = "index.html";
 };
+form.onsubmit =(e)=>{
+    e.preventDefault()
+}
+

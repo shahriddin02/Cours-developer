@@ -1,0 +1,306 @@
+* {
+    margin: 0px;
+}
+
+.headerCourseList {
+    display: flex;
+    padding: 20px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.headerCourseList div {
+    display: flex;
+    gap: 20px;
+}
+
+.headerCourseList button {
+    font-size: 20px;
+    border: none;
+    background: #2563EB;
+    border-radius: 7px;
+    color: white;
+    padding: 10px 20px;
+}
+
+.main {
+    display: flex;
+}
+
+.mainLeft {
+    width: 15%;
+    padding: 20px;
+}
+
+.allCards {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+
+.cardDiv {
+    padding: 15px;
+    width: 29%;
+    border-radius: 20px;
+    display: flex;
+    gap: 15px;
+    background: #f8f6f6;
+    cursor: pointer;
+}
+
+
+.Journal {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cardDiv h1 {
+    font-size: 24px;
+}
+
+.modul {
+    display: flex;
+    gap: 10px;
+
+    margin: 5px 0px;
+}
+
+.hrefMenu {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 15px;
+    color: black;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 15px;
+}
+
+.hrefMenu:hover {
+    padding: 15px;
+    background: #E2E8F0;
+    color: rgb(54, 47, 151);
+}
+
+.imgLogo {
+    margin-top: 13px;
+    width: 70px;
+    height: 90px;
+    border-radius: 15px;
+}
+
+
+.close {
+    cursor: pointer;
+}
+
+.modelOkna {
+    width: 100%;
+    /* height: 100vh; */
+    display: flex;
+    justify-content: end;
+    position: absolute;
+    top: 0px;
+    display: none;
+}
+
+.modelOknoLeft {
+    width: 60%;
+    opacity: 1;
+    background-color: rgba(10, 10, 10, 0.267);
+}
+
+.course-body {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+}
+
+.course-info h2 {
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.course-details {
+    display: flex;
+    gap: 15px;
+    color: #777;
+    font-size: 14px;
+    margin-bottom: 18px;
+}
+
+.actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.edit-btn {
+    background: #2f66ff;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.eye-true {
+    border: none;
+    background: none;
+    font-size: 22px;
+    cursor: pointer;
+    color: #2f66ff;
+}
+.eye-false {
+    border: none;
+    background: none;
+    cursor: pointer;
+    color: #2f66ff;
+}
+
+.level {
+    background: #edf2ff;
+    color: #5a7dff;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 14px;
+}
+
+.course-image img {
+    width: 95px;
+}
+
+.course-card {
+    width: 40%;
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.course-header {
+    height: 45px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 15px;
+    border-bottom: 1px solid #ececec;
+}
+
+.journal {
+    margin: 0 10px 10px;
+    background: #f8f8f8;
+    border-radius: 12px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.journal-icon {
+    font-size: 24px;
+}
+
+.journal h3 {
+    font-size: 20px;
+}
+
+.menu{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+}
+
+.menu-item{
+    background:#fff;
+    border-radius:14px;
+    margin: 0px 10px;
+    padding:10px 10px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    box-shadow:0 2px 8px rgba(0,0,0,.05);
+}
+
+.arrow{
+    color:#2f66ff;
+    font-size:24px;
+    font-weight:bold;
+}
+
+.reviews-right{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.stars{
+    color:#ffb400;
+    letter-spacing:2px;
+}
+
+.rating{
+    font-weight:700;
+}
+
+.teachers{
+    margin-top:22px;
+}
+
+.teachers-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:12px;
+    padding-left:10px;
+}
+
+.teachers-header h3{
+    color:#999;
+    font-size:24px;
+}
+
+.teachers-header button{
+    border:none;
+    background:none;
+    color:#2f66ff;
+    font-size:20px;
+    font-weight:600;
+    cursor:pointer;
+}
+
+.teacher-card{
+    background:#fff;
+    border-radius:15px;
+    padding:15px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    box-shadow:0 2px 8px rgba(0,0,0,.05);
+}
+
+.teacher-left{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.teacher-left img{
+    width:55px;
+    height:55px;
+    border-radius:50%;
+    object-fit:cover;
+}
+
+.teacher-left h4{
+    font-size:18px;
+    margin-bottom:5px;
+}
+
+.teacher-left p{
+    color:#999;
+    font-size:14px;
+}

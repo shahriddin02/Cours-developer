@@ -1,142 +1,123 @@
-let allCards = document.querySelector(".allCards")
+let all_Cards = document.querySelector(".all_Cards");
+let hero = document.querySelector(".hero_Okna");
+let mentorWindow = document.querySelector(".mentorWindow");
+let overlay = document.querySelector(".overlay");
 
-let url = "https://63849dde3fa7acb14ffada13.mockapi.io/api/Mentors"
+let url = "https://63849dde3fa7acb14ffada13.mockapi.io/api/Mentors";
 
-let close = document.querySelector(".close")
-let modal = document.querySelector(".modelOkna")
+function getInitials(name = "", surname = "") {
+    return `${name[0] || ""}${surname[0] || ""}`.toUpperCase();
+}
 
+function avatarHTML(avatarUrl, initials, size = "small") {
+    let cls = size === "big" ? "imgLogo big" : "imgLogo";
+    if (avatarUrl) {
+        return `<img class="${cls}" src="${avatarUrl}"
+                     onerror="this.outerHTML = '<div class=\\'${cls} avatarInitials\\'>${initials}</div>'">`;
+    }
+    return `<div class="${cls} avatarInitials">${initials}</div>`;
+}
 
 async function get() {
-    let response = await fetch(url)
-    let data = await response.json()
+    let response = await fetch(url);
+    let data = await response.json();
 
     data.forEach((card) => {
-        let cardDiv = document.createElement("div")
-        cardDiv.className = "cardDiv"
-        cardDiv.innerHTML = `
-        <img class="imgLogo" src="${card.logo}" alt="">
-                <div class=""cardDiv> 
-                    <h1>${card.name}</h1>
-                    <div class="modul">
-                        <p>backend</p>
-                        <hr>
-                        <p>⚡Уроки: ${card.lessons}</p>
-                    </div>
-                    <div class="Journal">
-                        <a class="hrefMenu" href="">
-                            <p>🧾Журнал</p>
-                        </a>
-                        <a class="hrefMenu" href="">
-                            <p>🖌</p>
-                        </a>
-                    </div>
-                    </div>
+        let cardDiv = document.createElement("div");
+        cardDiv.className = "cardDiv";
 
-        `
+        let initials = getInitials(card.name, card.surname);
+        let isBlocked = card.Status === false;
+
+        cardDiv.innerHTML = `
+            ${avatarHTML(card.avatar, initials)}
+
+            <div class="cardInfo">
+                <h3>${card.name} ${card.surname}</h3>
+                <p class="position">${card.Position || "Backend"}</p>
+                <p class="contact">✉ ${card.email}</p>
+            </div>
+
+            ${isBlocked ? `<span class="lockIcon">🔒</span>` : ""}
+            <div class="arrow">➜</div>
+        `;
+
         cardDiv.onclick = () => {
-            modal.style.display = "flex";
-            infoUser(card)
+            hero.style.display = "flex";
+            infoUser(card);
         };
-        allCards.append(cardDiv)
+
+        all_Cards.append(cardDiv);
     });
 }
-get()
+
+get();
 
 function infoUser(info) {
-    modal.innerHTML = ""
-    let div = document.createElement("div");
-    div.className = "course-card";
-    div.innerHTML = `            <div class="course-header">
-                <p class="close">X</p>
-                <span class="title">Курс</span>
-            </div>
+    let initials = getInitials(info.name, info.surname);
+    let isBlocked = info.Status === false;
 
-            <div class="course-body">
-                <div class="course-info">
-                    <h2>${info.name}</h2>
+    let skills = [info["Skil-1"], info["Skil-2"], info["Skil-3"], info["Skil-4"]]
+        .filter(Boolean)
+        .map((s) => `<div class="skill">${s}</div>`)
+        .join("");
 
-                    <div class="course-details">
-                        <span>📄 Модули: ${info.module}</span>
-                        <span>📋 Уроки: ${info.lessons}</span>
-                    </div>
-
-                    <div class="actions">
-                        <button class="edit-btn">✏ Изменить</button>
-
-                        <button class="eye-true">${info.status ? '👁' : '🚫'}</button>
-
-                        <span class="level">Basic</span>
-                    </div>
-                </div>
-
-                <div class="course-image">
-                    <img src="${info.logo}" alt="C++" />
-                </div>
-            </div>
-
-            <div class="journal">
-                <div class="journal-icon">📋</div>
-                <div>
-                    <h3>Журнал</h3>
-                </div>
-            </div>
-
-            <div class="menu">
-
-    <div class="menu-item">
-        <span>Чему вы научитесь?</span>
-        <span class="arrow">›</span>
-    </div>
-
-    <div class="menu-item">
-        <span>Программа курса</span>
-        <span class="arrow">›</span>
-    </div>
-
-    <div class="menu-item">
-        <span>Подписки</span>
-        <span class="arrow">›</span>
-    </div>
-
-    <div class="menu-item reviews">
-        <span>Отзывы (8)</span>
-
-        <div class="reviews-right">
-            <span class="stars">★★★★☆</span>
-            <span class="rating">3.5</span>
-            <span class="arrow">›</span>
+    mentorWindow.innerHTML = `
+        <div class="windowHeader">
+            <p class="close">✕</p>
+            <h2>Ментор</h2>
         </div>
-    </div>
 
-</div>
+        <div class="topInfo">
+            ${avatarHTML(info.avatar, initials, "big")}
+            <h2>${info.name} ${info.surname}</h2>
+            <p class="position">${info.Position || "Backend"}</p>
+        </div>
 
-<div class="teachers">
+        <div class="info">
+            <p><b>Телефон:</b> ${info.phoneNumber}</p>
+            <p><b>E-mail:</b> ${info.email}</p>
+            <p><b>Дата рождения:</b> ${info.birthday}</p>
+            <p><b>Пол:</b> ${info.gender}</p>
+        </div>
 
-    <div class="teachers-header">
-        <h3>Преподаватели</h3>
-        <button>+ Добавить</button>
-    </div>
+        <button class="editBtn">✏ Изменить</button>
 
-    <div class="teacher-card">
+        <div class="skills">
+            <h3>Навыки</h3>
+            <div class="course-details">${skills}</div>
+            <p style="margin-top:15px; color:#374151; line-height:1.5;">
+                ${info.description}
+            </p>
+        </div>
 
-        <div class="teacher-left">
-            <img src="${info.mentorAvatar}" alt="">
+        <div class="blockRow">
             <div>
-                <h4>${info.mentorName}</h4>
-                <p>${info.mentorNumberPhone}</p>
+                <b>Заблокировать аккаунт</b>
+                <p style="color:#6B7280; font-size:13px;">Полностью блокирует действия ментора</p>
             </div>
+            <label class="switch">
+                <input type="checkbox" class="blockToggle" ${isBlocked ? "checked" : ""}>
+                <span class="slider"></span>
+            </label>
         </div>
 
-        <span class="arrow">›</span>
+        <div class="course">
+            <h3>Курсы</h3>
+            <p><b>${info.activeCourseName}</b></p>
+            <p>📦 Модули: ${info.activeCourseModule}</p>
+            <p>📖 Уроки: ${info.activeCourseLesson}</p>
+            <p>⭐ Рейтинг: ${info.activeCourseAverageReview}</p>
+        </div>
+    `;
 
-    </div>
+    mentorWindow.querySelector(".close").onclick = () => {
+        hero.style.display = "none";
+    };
 
-</div>
-`
+   
 
-    let close = div.querySelector('.close');
-    close.onclick = () => {
-        modal.style.display = "none";
-    }
-    modal.appendChild(div)
+    overlay.onclick = () => {
+        hero.style.display = "none";
+    };
 }

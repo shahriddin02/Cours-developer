@@ -1,11 +1,11 @@
 let url = "https://63849dde3fa7acb14ffada13.mockapi.io/api/Courses";
 
-let save = document.querySelector(".save");
+let form = document.querySelector(".course_form");
 
-save.onclick = async () => {
+form.addEventListener("submit", async (e) => {
+    e.preventDefault();
 
     let newCourse = {
-
         name: document.querySelector(".name").value,
         description: document.querySelector(".description").value,
         logo: document.querySelector(".logo").value,
@@ -14,14 +14,12 @@ save.onclick = async () => {
         mentorName: document.querySelector(".mentorName").value,
         mentorAvatar: document.querySelector(".mentorAvatar").value,
 
-        status: true,
-        mentorNumberPhone: "",
-        category: "",
-        certificate: false
-
+        category: document.querySelector(".category").value,
+        certificate: document.querySelector(".certificate").checked,
+        status: document.querySelector(".status").checked,
     };
 
-    await fetch(url, {
+    let res = await fetch(url, {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
@@ -29,7 +27,10 @@ save.onclick = async () => {
         body: JSON.stringify(newCourse)
     });
 
-    alert("Курс успешно добавлен!");
-
-    window.location.href = "index.html";
-};
+    if (res.ok) {
+        alert("Курс добавлен!");
+        form.reset();
+    } else {
+        alert("Ошибка!");
+    }
+});

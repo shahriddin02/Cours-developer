@@ -26,7 +26,7 @@
             <img src="./img/supervised_user_circle.png" alt="">
             <span>Пользователи</span>
         </a>
-        <a href="#" class="menu_item">
+        <a href="./mentors.html" class="menu_item">
             <img src="./img/supervisor_account.png" alt="">
             <span>Менторы</span>
         </a>
@@ -43,38 +43,43 @@
         </div>
         <div class="course_card">
             <form class="course_form">
-                <input type="text" placeholder="Название курса">
-                <textarea placeholder="Краткое описание"></textarea>
+                <input type="text" placeholder="Название курса" class="name">
+                <textarea placeholder="Краткое описание" class="description"></textarea>
                 <div class="form_row">
-                    <input type="text" placeholder=".jpeg / .png / .jpg / .svg">
-                    <div class="switch_group">
-                        <span>Сертификат об окончании</span>
-                        <input type="checkbox">
-                    </div>
-                </div>
-                <div class="form_row">
-                    <input type="number" placeholder="Модули курс">
-                    <input type="number" placeholder="Уроки курс">
-                </div>
-                <div class="form_row">
-                    <input type="text" placeholder="Имя и Фамилия Учитель">
-                    <input type="text" placeholder=".jpeg / .png / .jpg / .svg">
-                </div>
-                <div class="form_row">
-                    <select>
-                        <option>Frontend</option>
-                        <option>Backend</option>
-                        <option>FullStack</option>
-                        <option>C++</option>
-                    </select>
-                    <div class="switch_group">
-                        <span>Статус курса</span>
-                        <input type="checkbox">
-                    </div>
-                </div>
+    <input type="text" placeholder=".jpeg / .png / .jpg / .svg" class="logo">
+
+    <div class="switch_group">
+        <span>Сертификат об окончании</span>
+        <input type="checkbox" class="certificate">
+    </div>
+</div>
+
+<div class="form_row">
+    <input type="number" placeholder="Модули курс" class="module">
+    <input type="number" placeholder="Уроки курс" class="lessons">
+</div>
+
+<div class="form_row">
+    <input type="text" placeholder="Имя и Фамилия Учитель" class="mentorName">
+    <input type="text" placeholder=".jpeg / .png / .jpg / .svg" class="mentorAvatar">
+</div>
+
+<div class="form_row">
+    <select class="category">
+        <option>Frontend</option>
+        <option>Backend</option>
+        <option>FullStack</option>
+        <option>C++</option>
+    </select>
+
+    <div class="switch_group">
+        <span>Статус курса</span>
+        <input type="checkbox" class="status">
+    </div>
+</div>
                 <div class="form_actions">
-                    <button class="btn_save">Сохранить</button>
-                    <button class="btn_cancel">Отменить</button>
+                    <button class="btn_save" type="submit">Сохранить</button>
+                    <button class="btn_cancel" type="button">Отменить</button>
                 </div>
             </form>
         </div>
@@ -86,7 +91,5 @@
             <script src="./script.js"></script>
 
 
-</body>
-</html>
 </body>
 </html>

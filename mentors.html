@@ -4,61 +4,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="course.css">
+    <title>Mentors</title>
+    <link rel="stylesheet" href="mentors.css">
 </head>
+
 <body>
-    <header class="headerCourseList">
-        <div>
+
+    <header class="header">
+
+        <div class="logoBox">
             <img src="img/courseListLogo.png" alt="">
             <h1>Менторы</h1>
         </div>
-        <button>+ Новый курс</button>
+
+        <button class="addBtn">
+            + Новый ментор
+        </button>
+
     </header>
 
-    <div class="main">
-        <div class="mainLeft">
-            <a class="hrefMenu" href="">
-                <img src="img/courseListeStatic.png" alt="">
-                <p>Статистика</p>
-            </a>
-            <a class="hrefMenu" href="">
-                <img src="img/courseListCours.png" alt="">
-                <p>Курсы</p>
-            </a>
-            <a class="hrefMenu" href="">
-                <img src="img/courseListUser.png" alt="">
-                <p>Пользователи</p>
-            </a>
-            <a class="hrefMenu" href="">
-                <img src="img/courseListMentor.png" alt="">
-                <p>Менторы</p>
-            </a>
-            <a class="hrefMenu" href="">
-                <img src="img/courseListNastroy.png" alt="">
-                <p>Настройки</p>
+    <main class="container">
+
+        <aside class="sidebar">
+
+            <a href="#">
+                <img src="img/courseListeStatic.png">
+                <span>Статистика</span>
             </a>
 
-        </div>
+            <a href="./course.html" >
+                <img src="img/courseListCours.png">
+                <span>Курсы</span>
+            </a>
 
+            <a href="#">
+                <img src="img/courseListUser.png">
+                <span>Пользователи</span>
+            </a>
 
-        <div class="allCards">
+            <a class="active" href="#">
+                <img src="img/courseListMentor.png">
+                <span>Менторы</span>
+            </a>
+
+            <a href="#">
+                <img src="img/courseListNastroy.png">
+                <span>Настройки</span>
+            </a>
+
+        </aside>
+
+        <section class="all_Cards">
+
+            
+
+        </section>
+
+    </main>
+
+    <div class="hero_Okna">
+
+        <div class="overlay"></div>
+
+        <div class="mentorWindow">
+
+            
+
         </div>
 
     </div>
 
+    <script src="mentors.js"></script>
 
-
-    <div class="modelOkna">
-        <div class="modelOknoLeft"></div>
-
-        
-
-</div>
-
-
-
-        <script src="course.js"></script>
 </body>
 
 </html>

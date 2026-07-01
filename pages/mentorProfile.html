@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Добавить ментора</title>
+  <link rel="stylesheet" href="../css/mentorProfile.css">
+</head>
+
+<body>
+
+
+
+
+  <div class="container">
+
+    <div class="mainLeft">
+      <a class="hrefMenu" href="">
+        <img src="../img/courseListeStatic.png" alt="">
+        <p>Статистика</p>
+      </a>
+      <a class="hrefMenu" href="../pages/course.html">
+        <img src="../img/courseListCours.png" alt="">
+        <p>Курсы</p>
+      </a>
+      <a class="hrefMenu" href="">
+        <img src="../img/courseListUser.png" alt="">
+        <p>Пользователи</p>
+      </a>
+      <a class="hrefMenu" href="mentors.html">
+        <img src="../img/courseListMentor.png" alt="">
+        <p>Менторы</p>
+      </a>
+      <a class="hrefMenu" href="">
+        <img src="../img/courseListNastroy.png" alt="">
+        <p>Настройки</p>
+      </a>
+
+    </div>
+
+
+    <div class="page-wrap">
+
+      <!-- Back row -->
+      <div class="back-row">
+        <button type="button" class="back-btn" id="backBtn">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M19 12H5M12 19l-7-7 7-7" />
+          </svg>
+          Назад
+        </button>
+      </div>
+
+      <form id="mentorForm" class="card" novalidate>
+
+        <div class="form-main">
+
+          <!-- Left: fields -->
+          <div class="fields-col">
+
+            <div class="field">
+              <label for="name">Имя</label>
+              <input type="text" id="name" name="name" placeholder="Имя">
+            </div>
+
+            <div class="field">
+              <label for="surname">Фамилия</label>
+              <input type="text" id="surname" name="surname" placeholder="Фамилия">
+            </div>
+
+            <div class="field">
+              <label for="birthDate">Дата рождения</label>
+              <input type="date" id="birthDate" name="birthDate">
+            </div>
+
+            <div class="field gender-field">
+              <label class="radio-label">
+                <input type="radio" name="gender" value="Мужчина" checked>
+                <span class="radio-custom"></span>
+                Мужчина
+              </label>
+              <label class="radio-label">
+                <input type="radio" name="gender" value="Женщина">
+                <span class="radio-custom"></span>
+                Женщина
+              </label>
+            </div>
+
+            <div class="field">
+              <label for="country">Страна</label>
+              <select id="country" name="country">
+                <option value="">Выберите страну</option>
+                <option value="Таджикистан, Душанбе">Таджикистан, Душанбе</option>
+                <option value="Узбекистан, Ташкент">Узбекистан, Ташкент</option>
+                <option value="Казахстан, Алматы">Казахстан, Алматы</option>
+                <option value="Кыргызстан, Бишкек">Кыргызстан, Бишкек</option>
+                <option value="Россия, Москва">Россия, Москва</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="Email">
+            </div>
+
+            <div class="field">
+              <label for="phone">Телефон</label>
+              <input type="tel" id="phone" name="phone" placeholder="Телефон">
+            </div>
+
+            <div class="field">
+              <label for="position">Позиция</label>
+              <input type="text" id="position" name="position" placeholder="Позиция">
+            </div>
+
+            <div class="field">
+              <label for="description">Описание</label>
+              <textarea id="description" name="description" rows="4" placeholder="Описание"></textarea>
+            </div>
+
+          </div>
+
+          <!-- Right: photo -->
+          <div class="photo-col">
+            <span class="photo-label">Фото</span>
+
+            <div class="photo-box" id="photoBox">
+              <img id="photoPreview" class="photo-preview" src="../img/" alt="" hidden>
+              <span id="photoPlaceholder" class="photo-placeholder">Нет фото</span>
+              <button type="button" class="photo-remove" id="photoRemove" hidden>&times;</button>
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- Skills -->
+        <div class="skills-block">
+          <h3>Скиллы</h3>
+          <div class="skills-grid">
+            <div class="field">
+              <label for="skill1">Описание</label>
+              <input type="text" id="skill1" name="skill1" placeholder="Например, C++">
+            </div>
+            <div class="field">
+              <label for="skill2">Описание</label>
+              <input type="text" id="skill2" name="skill2" placeholder="Например, C#">
+            </div>
+            <div class="field">
+              <label for="skill3">Описание</label>
+              <input type="text" id="skill3" name="skill3" placeholder="Например, Flutter">
+            </div>
+            <div class="field">
+              <label for="skill4">Описание</label>
+              <input type="text" id="skill4" name="skill4" placeholder="Например, HTML & CSS">
+            </div>
+          </div>
+        </div>
+
+        <!-- Actions -->
+        <div class="actions">
+          <span id="formMsg" class="form-msg"></span>
+          <button type="submit" class="btn btn-primary" id="saveBtn">Сохранить</button>
+          <button type="button" class="btn btn-outline" id="cancelBtn">Отменить</button>
+        </div>
+
+      </form>
+
+    </div>
+
+  </div>
+
+  <script src="../js/mentorProfile.js"></script>
+</body>
+
+</html>

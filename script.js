@@ -2,8 +2,7 @@ let url = "https://63849dde3fa7acb14ffada13.mockapi.io/api/Courses";
 
 let form = document.querySelector(".course_form");
 
-form.addEventListener("submit", async (e) => {
-    e.preventDefault();
+save.onclick = async () => {
 
     let newCourse = {
         name: document.querySelector(".name").value,
@@ -27,10 +26,7 @@ form.addEventListener("submit", async (e) => {
         body: JSON.stringify(newCourse)
     });
 
-    if (res.ok) {
-        alert("Курс добавлен!");
-        form.reset();
-    } else {
-        alert("Ошибка!");
-    }
-});
+    alert("Курс успешно добавлен!");
+
+    window.location.href = "index.html";
+};

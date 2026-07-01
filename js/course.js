@@ -26,7 +26,7 @@ async function get() {
                         <a class="hrefMenu" href="">
                             <p>🧾Журнал</p>
                         </a>
-                        <a class="hrefMenu" href="">
+                        <a class="hrefMenu" href="../edit.html">
                             <p>🖌</p>
                         </a>
                     </div>

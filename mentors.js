@@ -5,9 +5,9 @@ let overlay = document.querySelector(".overlay");
 
 let url = "https://63849dde3fa7acb14ffada13.mockapi.io/api/Mentors";
 
-// function getInitials(name = "", surname = "") {
-//     return `${name[0] || ""}${surname[0] || ""}`.toUpperCase();
-// }
+function getInitials(name = "", surname = "") {
+    return `${name[0] || ""}${surname[0] || ""}`.toUpperCase();
+}
 
 function avatarHTML(avatarUrl, initials, size = "small") {
     let cls = size === "big" ? "imgLogo big" : "imgLogo";

@@ -1,0 +1,209 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background: #F5F7FB;
+}
+
+.container{
+    display: flex;
+    min-height: 100vh;
+}
+
+
+
+
+
+
+
+
+
+.sidebar{
+    width: 250px;
+    background: #fff;
+    padding: 25px 20px;
+    border-right: 1px solid #E5E7EB;
+}
+
+.logo{
+    margin-bottom: 30px;
+}
+
+.profile{
+    margin-bottom: 35px;
+}
+
+.menu{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.menu_item{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: #333;
+    transition: .2s;
+}
+
+.menu_item:hover{
+    background: #EEF4FF;
+}
+
+.menu_item.active{
+    background: #EEF4FF;
+    color: #2563EB;
+}
+
+
+
+
+
+
+.main{
+    flex: 1;
+    padding: 35px;
+}
+
+.page_header{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.page_header h1{
+    font-size: 28px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.edit_card{
+    background: white;
+    border-radius: 16px;
+    padding: 30px;
+}
+
+.edit_form{
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.form_row{
+    display: flex;
+    gap: 20px;
+}
+
+.form_row>*{
+    flex: 1;
+}
+
+input,
+textarea,
+select{
+    width: 100%;
+    padding: 14px 16px;
+    border: 1px solid #E5E7EB;
+    border-radius: 10px;
+    outline: none;
+    font-size: 15px;
+}
+
+textarea{
+    height: 90px;
+    resize: none;
+}
+
+input:focus,
+textarea:focus,
+select:focus{
+    border-color: #2563EB;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.switch_group{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #E5E7EB;
+    border-radius: 10px;
+    padding: 0 16px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.form_actions{
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.saveBtn{
+    background: #2563EB;
+    color: white;
+    border: none;
+    padding: 14px 28px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.cancelBtn{
+    background: white;
+    color: #2563EB;
+    border: 1px solid #2563EB;
+    padding: 14px 28px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.saveBtn:hover{
+    background: #1E4ED8;
+}
+
+.cancelBtn:hover{
+    background: #EEF4FF;
+}

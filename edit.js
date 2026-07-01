@@ -20,17 +20,17 @@ let cancelBtn = document.querySelector(".cancelBtn");
 
 nameInput.value = course.name || "";
 descriptionInput.value = course.description || "";
-logoInput.value = course.logo || "";
-moduleInput.value = course.module || "";
-lessonsInput.value = course.lessons || "";
-mentorNameInput.value = course.mentorName || "";
-mentorAvatarInput.value = course.mentorAvatar || "";
-categoryInput.value = course.category || "";
-statusInput.checked = course.status || false;
-certificateInput.checked = course.certificate || false;
+logoInput.value = course.logo;
+moduleInput.value = course.module;
+lessonsInput.value = course.lessons
+mentorNameInput.value = course.mentorName;
+mentorAvatarInput.value = course.mentorAvatar;
+categoryInput.value = course.category;
+statusInput.checked = course.status ;
+certificateInput.checked = course.certificate;
 
 
-let learn = course.learn || [];
+let learn = course.learn;
 
 let learnItems = document.querySelector(".learnItems");
 let learnText = document.querySelector(".learnText");

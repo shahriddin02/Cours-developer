@@ -207,3 +207,8 @@ select:focus{
 .cancelBtn:hover{
     background: #EEF4FF;
 }
+
+.back {
+    text-decoration: none;
+    color: black;
+}

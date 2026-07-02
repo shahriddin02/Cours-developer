@@ -28,7 +28,7 @@
         <img src="../img/courseListUser.png" alt="">
         <p>Пользователи</p>
       </a>
-      <a class="hrefMenu" href="mentors.html">
+      <a class="hrefMenu" href="../mentors.html">
         <img src="../img/courseListMentor.png" alt="">
         <p>Менторы</p>
       </a>
@@ -44,13 +44,15 @@
 
       <!-- Back row -->
       <div class="back-row">
-        <button type="button" class="back-btn" id="backBtn">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-            stroke-linecap="round" stroke-linejoin="round">
-            <path d="M19 12H5M12 19l-7-7 7-7" />
-          </svg>
-          Назад
-        </button>
+        <a href="../mentors.html">
+          <button type="button" class="back-btn" id="backBtn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M19 12H5M12 19l-7-7 7-7" />
+            </svg>
+            Назад
+          </button>
+        </a>
       </div>
 
       <form id="mentorForm" class="card" novalidate>
@@ -127,11 +129,15 @@
             <span class="photo-label">Фото</span>
 
             <div class="photo-box" id="photoBox">
-              <img id="photoPreview" class="photo-preview" src="../img/" alt="" hidden>
+              <img id="photoPreview" class="photo-preview" src="" alt="" hidden>
               <span id="photoPlaceholder" class="photo-placeholder">Нет фото</span>
               <button type="button" class="photo-remove" id="photoRemove" hidden>&times;</button>
             </div>
 
+            <div class="field" style="margin-top:10px;">
+              <label for="photoUrl">Ссылка на фото</label>
+              <input type="text" id="photoUrl" name="photoUrl" placeholder="https://...">
+            </div>
           </div>
 
         </div>

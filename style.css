@@ -234,3 +234,8 @@ textarea{
 
     cursor:pointer;
 }
+
+.back {
+    text-decoration: none;
+    color: black;
+}

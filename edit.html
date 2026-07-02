@@ -10,126 +10,138 @@
 
 <body>
 
-<div class="container">
+    <div class="container">
 
-    <aside class="sidebar">
+        <aside class="sidebar">
 
-        <div class="logo">
-            <img src="./img/Logo-fin2.png" alt="">
-        </div>
+            <div class="logo">
+                <img src="./img/Logo-fin2.png" alt="">
+            </div>
 
-        <div class="profile">
-            <img src="./img/Profile.png" alt="">
-        </div>
+            <div class="profile">
+                <img src="./img/Profile.png" alt="">
+            </div>
 
-        <nav class="menu">
+            <nav class="menu">
 
-            <a href="#" class="menu_item">
-                <img src="./img/insert_chart.png" alt="">
-                <span>Статистика</span>
-            </a>
+                <a href="#" class="menu_item">
+                    <img src="./img/insert_chart.png" alt="">
+                    <span>Статистика</span>
+                </a>
 
-            <a href="#" class="menu_item active">
-                <img src="./img/mdi_view-grid-outline (1).png" alt="">
-                <span>Курсы</span>
-            </a>
+                <a href="./pages/course.html" class="menu_item active">
+                    <img src="./img/mdi_view-grid-outline (1).png" alt="">
+                    <span>Курсы</span>
+                </a>
 
-            <a href="#" class="menu_item">
-                <img src="./img/supervised_user_circle.png" alt="">
-                <span>Пользователи</span>
-            </a>
+                <a href="#" class="menu_item">
+                    <img src="./img/supervised_user_circle.png" alt="">
+                    <span>Пользователи</span>
+                </a>
 
-            <a href="#" class="menu_item">
-                <img src="./img/supervisor_account.png" alt="">
-                <span>Менторы</span>
-            </a>
+                <a href="./mentors.html" class="menu_item">
+                    <img src="./img/supervisor_account.png" alt="">
+                    <span>Менторы</span>
+                </a>
 
-            <a href="#" class="menu_item">
-                <img src="./img/settings.png" alt="">
-                <span>Настройки</span>
-            </a>
+                <a href="#" class="menu_item">
+                    <img src="./img/settings.png" alt="">
+                    <span>Настройки</span>
+                </a>
 
-        </nav>
+            </nav>
 
-    </aside>
+        </aside>
 
-    <main class="main">
 
-        <div class="page_header">
-            <img src="./img/Vector.png" alt="">
-            <h1>Новый курс</h1>
-        </div>
+        <main class="main">
 
-        <div class="edit_card">
+            <div class="page_header">
+                <img src="./img/Vector.png" alt="">
+                <a class="back" href="./pages/course.html">
+                    <h1> 🔙 Новый курс</h1>
+                </a>
+            </div>
 
-            <form class="edit_form">
+            <div class="edit_card">
 
-                <input class="name" type="text" placeholder="Название курса">
+                <form class="edit_form">
 
-                <textarea class="description" placeholder="Краткое описание"></textarea>
+                    <input class="name" type="text" placeholder="Название курса">
 
-                <div class="form_row">
+                    <textarea class="description" placeholder="Краткое описание"></textarea>
 
-                    <input class="logo" type="text" placeholder=".jpeg / .png / .jpg">
+                    <div class="form_row">
 
-                    <div class="switch_group">
-                        <span>Сертификат</span>
-                        <input class="certificate" type="checkbox">
+                        <input class="logo" type="text" placeholder=".jpeg / .png / .jpg">
+
+                        <div class="switch_group">
+                            <span>Сертификат</span>
+                            <input class="certificate" type="checkbox">
+                        </div>
+
                     </div>
 
-                </div>
+                    <div class="form_row">
 
-                <div class="form_row">
+                        <input class="module" type="number" placeholder="Количество модулей">
 
-                    <input class="module" type="number" placeholder="Количество модулей">
+                        <input class="lessons" type="number" placeholder="Количество уроков">
 
-                    <input class="lessons" type="number" placeholder="Количество уроков">
-
-                </div>
-
-                <div class="form_row">
-
-                    <input class="mentorName" type="text" placeholder="Имя преподавателя">
-
-                    <input class="mentorAvatar" type="text" placeholder="Фото преподавателя">
-
-                </div>
-
-                <div class="form_row">
-
-                    <select class="category">
-                        <option value="Frontend">Frontend</option>
-                        <option value="Backend">Backend</option>
-                    </select>
-
-                    <div class="switch_group">
-                        <span>Статус курса</span>
-                        <input class="status" type="checkbox">
                     </div>
 
-                </div>
+                    <div class="form_row">
 
-                <div class="form_actions">
+                        <input class="mentorName" type="text" placeholder="Имя преподавателя">
 
-                    <button type="button" class="cancelBtn">
-                        Отменить
-                    </button>
+                        <input class="mentorAvatar" type="text" placeholder="Фото преподавателя">
 
-                    <button type="button" class="saveBtn">
-                        Сохранить
-                    </button>
+                    </div>
 
-                </div>
+                    <div class="form_row">
 
-            </form>
+                        <select class="category">
+                            <option value="Frontend">Frontend</option>
+                            <option value="Backend">Backend</option>
+                        </select>
 
-        </div>
+                        <div class="switch_group">
+                            <span>Статус курса</span>
+                            <input class="status" type="checkbox">
+                        </div>
 
-    </main>
+                    </div>
+                    <!-- ЗДЕСЬ: добавлен блок, без которого learnItems/learnText/addLearn были null -->
+                    <div class="learn_block">
+                        <h3>Чему научится студент</h3>
+                        <div class="learnItems"></div>
+                        <div class="learn_add_row">
+                            <input type="text" class="learnText" placeholder="Новый пункт">
+                            <button type="button" class="addLearn">+ Добавить</button>
+                        </div>
+                    </div>
+                    <div class="form_actions">
 
-</div>
+                        <button type="button" class="cancelBtn">
+                            Отменить
+                        </button>
 
-<script src="edit.js"></script>
+                        <button type="button" class="saveBtn">
+                            Сохранить
+                        </button>
+
+                    </div>
+
+                </form>
+
+            </div>
+
+        </main>
+
+    </div>
+
+    <script src="edit.js"></script>
 
 </body>
+
 </html>
